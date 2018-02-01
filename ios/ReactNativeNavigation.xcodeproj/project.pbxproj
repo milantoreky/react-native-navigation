@@ -13,6 +13,12 @@
 		26AFF3F51D7EEE2400CBA211 /* RCCTitleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AFF3F41D7EEE2400CBA211 /* RCCTitleViewHelper.m */; };
 		2DCD499A1F33AAC30035123A /* RCCCustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD49981F33AAC30035123A /* RCCCustomBarButtonItem.m */; };
 		2DDE72091FB27E730017290C /* RCTConvert+UIBarButtonSystemItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE72071FB27E720017290C /* RCTConvert+UIBarButtonSystemItem.m */; };
+		B89E0AFC201F484D008CED0B /* RCCSlideOutAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E0AF5201F484D008CED0B /* RCCSlideOutAnimator.m */; };
+		B89E0AFD201F484D008CED0B /* RCCScaleFadeOutAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E0AF7201F484D008CED0B /* RCCScaleFadeOutAnimator.m */; };
+		B89E0AFE201F484D008CED0B /* RCCSlideInAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E0AF9201F484D008CED0B /* RCCSlideInAnimator.m */; };
+		B89E0AFF201F484D008CED0B /* RCCScaleFadeInAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E0AFB201F484D008CED0B /* RCCScaleFadeInAnimator.m */; };
+		B89E0B02201F4D45008CED0B /* RCCFadeOutAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E0B01201F4D45008CED0B /* RCCFadeOutAnimator.m */; };
+		B89E0B05201F4D64008CED0B /* RCCFadeInAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E0B04201F4D64008CED0B /* RCCFadeInAnimator.m */; };
 		CC84A19E1C1A0C4E00B3A6A2 /* RCCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1941C1A0C4E00B3A6A2 /* RCCManager.m */; };
 		CC84A19F1C1A0C4E00B3A6A2 /* RCCManagerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1961C1A0C4E00B3A6A2 /* RCCManagerModule.m */; };
 		CC84A1A01C1A0C4E00B3A6A2 /* RCCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1981C1A0C4E00B3A6A2 /* RCCNavigationController.m */; };
@@ -64,6 +70,18 @@
 		2DCD49991F33AAC30035123A /* RCCCustomBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCCustomBarButtonItem.h; sourceTree = "<group>"; };
 		2DDE72071FB27E720017290C /* RCTConvert+UIBarButtonSystemItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+UIBarButtonSystemItem.m"; sourceTree = "<group>"; };
 		2DDE72081FB27E730017290C /* RCTConvert+UIBarButtonSystemItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+UIBarButtonSystemItem.h"; sourceTree = "<group>"; };
+		B89E0AF4201F484D008CED0B /* RCCSlideOutAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCSlideOutAnimator.h; sourceTree = "<group>"; };
+		B89E0AF5201F484D008CED0B /* RCCSlideOutAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCSlideOutAnimator.m; sourceTree = "<group>"; };
+		B89E0AF6201F484D008CED0B /* RCCScaleFadeOutAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCScaleFadeOutAnimator.h; sourceTree = "<group>"; };
+		B89E0AF7201F484D008CED0B /* RCCScaleFadeOutAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCScaleFadeOutAnimator.m; sourceTree = "<group>"; };
+		B89E0AF8201F484D008CED0B /* RCCSlideInAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCSlideInAnimator.h; sourceTree = "<group>"; };
+		B89E0AF9201F484D008CED0B /* RCCSlideInAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCSlideInAnimator.m; sourceTree = "<group>"; };
+		B89E0AFA201F484D008CED0B /* RCCScaleFadeInAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCScaleFadeInAnimator.h; sourceTree = "<group>"; };
+		B89E0AFB201F484D008CED0B /* RCCScaleFadeInAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCScaleFadeInAnimator.m; sourceTree = "<group>"; };
+		B89E0B00201F4D45008CED0B /* RCCFadeOutAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCCFadeOutAnimator.h; sourceTree = "<group>"; };
+		B89E0B01201F4D45008CED0B /* RCCFadeOutAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCCFadeOutAnimator.m; sourceTree = "<group>"; };
+		B89E0B03201F4D64008CED0B /* RCCFadeInAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCCFadeInAnimator.h; sourceTree = "<group>"; };
+		B89E0B04201F4D64008CED0B /* RCCFadeInAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCCFadeInAnimator.m; sourceTree = "<group>"; };
 		CC84A1931C1A0C4E00B3A6A2 /* RCCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCManager.h; sourceTree = "<group>"; };
 		CC84A1941C1A0C4E00B3A6A2 /* RCCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = RCCManager.m; sourceTree = "<group>"; tabWidth = 2; };
 		CC84A1951C1A0C4E00B3A6A2 /* RCCManagerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCManagerModule.h; sourceTree = "<group>"; };
@@ -138,6 +156,25 @@
 			path = RCCToolBar;
 			sourceTree = "<group>";
 		};
+		B89E0AF3201F484D008CED0B /* RCCAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				B89E0AF8201F484D008CED0B /* RCCSlideInAnimator.h */,
+				B89E0AF9201F484D008CED0B /* RCCSlideInAnimator.m */,
+				B89E0AF4201F484D008CED0B /* RCCSlideOutAnimator.h */,
+				B89E0AF5201F484D008CED0B /* RCCSlideOutAnimator.m */,
+				B89E0B03201F4D64008CED0B /* RCCFadeInAnimator.h */,
+				B89E0B04201F4D64008CED0B /* RCCFadeInAnimator.m */,
+				B89E0B00201F4D45008CED0B /* RCCFadeOutAnimator.h */,
+				B89E0B01201F4D45008CED0B /* RCCFadeOutAnimator.m */,
+				B89E0AFA201F484D008CED0B /* RCCScaleFadeInAnimator.h */,
+				B89E0AFB201F484D008CED0B /* RCCScaleFadeInAnimator.m */,
+				B89E0AF6201F484D008CED0B /* RCCScaleFadeOutAnimator.h */,
+				B89E0AF7201F484D008CED0B /* RCCScaleFadeOutAnimator.m */,
+			);
+			path = RCCAnimator;
+			sourceTree = "<group>";
+		};
 		D85082BB1CBCF42400FDB961 /* RCCDrawerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +245,7 @@
 				D8D779951D04B7180050CFEA /* Helpers */,
 				260804D51CE0D7090094DBA1 /* RCCToolBar */,
 				D85082BB1CBCF42400FDB961 /* RCCDrawerController */,
+				B89E0AF3201F484D008CED0B /* RCCAnimator */,
 				CC84A1931C1A0C4E00B3A6A2 /* RCCManager.h */,
 				CC84A1941C1A0C4E00B3A6A2 /* RCCManager.m */,
 				2DCD49991F33AAC30035123A /* RCCCustomBarButtonItem.h */,
@@ -313,15 +351,19 @@
 			files = (
 				D85082EA1CBCF54200FDB961 /* TheSidebarController.m in Sources */,
 				CC84A1A01C1A0C4E00B3A6A2 /* RCCNavigationController.m in Sources */,
+				B89E0AFF201F484D008CED0B /* RCCScaleFadeInAnimator.m in Sources */,
 				2DCD499A1F33AAC30035123A /* RCCCustomBarButtonItem.m in Sources */,
 				D83514F61D29719A00D53758 /* RCCNotification.m in Sources */,
+				B89E0AFC201F484D008CED0B /* RCCSlideOutAnimator.m in Sources */,
 				CC84A19F1C1A0C4E00B3A6A2 /* RCCManagerModule.m in Sources */,
 				26AFF3F51D7EEE2400CBA211 /* RCCTitleViewHelper.m in Sources */,
+				B89E0AFE201F484D008CED0B /* RCCSlideInAnimator.m in Sources */,
 				D8D779981D04B7180050CFEA /* RCTHelpers.m in Sources */,
 				D85082E81CBCF54200FDB961 /* SidebarLuvocracyAnimation.m in Sources */,
 				D85082E31CBCF54200FDB961 /* SidebarAirbnbAnimation.m in Sources */,
 				D84813191C8C5EB700051BAF /* RCCLightBox.m in Sources */,
 				CC84A19E1C1A0C4E00B3A6A2 /* RCCManager.m in Sources */,
+				B89E0B02201F4D45008CED0B /* RCCFadeOutAnimator.m in Sources */,
 				26714EAC1EB0E9D3009F4D52 /* RCCCustomTitleView.m in Sources */,
 				D85082E21CBCF54200FDB961 /* RCCTheSideBarManagerViewController.m in Sources */,
 				D85082FC1CBCF8A800FDB961 /* MMDrawerBarButtonItem.m in Sources */,
@@ -336,11 +378,13 @@
 				D85082E11CBCF54200FDB961 /* RCCDrawerHelper.m in Sources */,
 				261108801E6C495400BF5D98 /* UIViewController+Rotation.m in Sources */,
 				D85082FE1CBCF8A800FDB961 /* MMDrawerVisualState.m in Sources */,
+				B89E0AFD201F484D008CED0B /* RCCScaleFadeOutAnimator.m in Sources */,
 				D85082FD1CBCF8A800FDB961 /* MMDrawerController.m in Sources */,
 				D85082E41CBCF54200FDB961 /* SidebarAnimation.m in Sources */,
 				D8E11C571CBD1F670018B644 /* RCCDrawerController.m in Sources */,
 				260804DB1CE0D9D20094DBA1 /* RCCToolBar.m in Sources */,
 				2DDE72091FB27E730017290C /* RCTConvert+UIBarButtonSystemItem.m in Sources */,
+				B89E0B05201F4D64008CED0B /* RCCFadeInAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

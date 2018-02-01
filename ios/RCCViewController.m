@@ -11,7 +11,12 @@
 #import "RCTHelpers.h"
 #import "RCCTitleViewHelper.h"
 #import "RCCCustomTitleView.h"
-
+#import "RCCSlideInAnimator.h"
+#import "RCCSlideOutAnimator.h"
+#import "RCCFadeInAnimator.h"
+#import "RCCFadeOutAnimator.h"
+#import "RCCScaleFadeInAnimator.h"
+#import "RCCScaleFadeOutAnimator.h"
 
 NSString* const RCCViewControllerCancelReactTouchesNotification = @"RCCViewControllerCancelReactTouchesNotification";
 
@@ -127,8 +132,6 @@ const NSInteger TRANSPARENT_NAVBAR_TAG = 78264803;
   return modifiedPassProps;
 }
 
-
-
 - (instancetype)initWithProps:(NSDictionary *)props children:(NSArray *)children globalProps:(NSDictionary *)globalProps bridge:(RCTBridge *)bridge
 {
   NSString *component = props[@"component"];
@@ -174,7 +177,6 @@ const NSInteger TRANSPARENT_NAVBAR_TAG = 78264803;
 - (void)commonInit:(RCTRootView*)reactView navigatorStyle:(NSDictionary*)navigatorStyle props:(NSDictionary*)props
 {
   self.view = reactView;
-  
   self.edgesForExtendedLayout = UIRectEdgeNone; // default
   self.automaticallyAdjustsScrollViewInsets = NO; // default
   
@@ -891,6 +893,30 @@ const NSInteger TRANSPARENT_NAVBAR_TAG = 78264803;
     }
   }
   return actions;
+}
+
+#pragma mark - UINavigationControllerDelegate
+
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC
+{
+  if ([self.animationType isEqualToString:@"slideIn"]) {
+    return [[RCCSlideInAnimator alloc] init];
+  } else if ([self.animationType isEqualToString:@"slideOut"]) {
+    return [[RCCSlideOutAnimator alloc] init];
+  } else if ([self.animationType isEqualToString:@"fadeIn"]) {
+    return [[RCCFadeInAnimator alloc] init];
+  } else if ([self.animationType isEqualToString:@"fadeOut"]) {
+    return [[RCCFadeOutAnimator alloc] init];
+  } else if ([self.animationType isEqualToString:@"scaleFadeIn"]) {
+    return [[RCCScaleFadeInAnimator alloc] init];
+  } else if ([self.animationType isEqualToString:@"scaleFadeOut"]) {
+    return [[RCCScaleFadeOutAnimator alloc] init];
+  } else {
+    return nil;
+  }
 }
 
 @end

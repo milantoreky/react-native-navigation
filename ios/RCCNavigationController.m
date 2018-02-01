@@ -192,21 +192,10 @@ NSString const *CALLBACK_ASSOCIATED_ID = @"RCCNavigationController.CALLBACK_ASSO
         return;
       }
     }
-    
+  
     NSString *animationType = actionParams[@"animationType"];
-    if ([animationType isEqualToString:@"fade"])
-    {
-      CATransition *transition = [CATransition animation];
-      transition.duration = 0.25;
-      transition.type = kCATransitionFade;
-      
-      [self.view.layer addAnimation:transition forKey:kCATransition];
-      [self pushViewController:viewController animated:NO];
-    }
-    else
-    {
-      [self pushViewController:viewController animated:animated];
-    }
+    [self performAnimation:@"push" viewController:viewController animated:animated animationType:animationType];
+    
     return;
   }
   
@@ -214,19 +203,8 @@ NSString const *CALLBACK_ASSOCIATED_ID = @"RCCNavigationController.CALLBACK_ASSO
   if ([performAction isEqualToString:@"pop"])
   {
     NSString *animationType = actionParams[@"animationType"];
-    if ([animationType isEqualToString:@"fade"])
-    {
-      CATransition *transition = [CATransition animation];
-      transition.duration = 0.25;
-      transition.type = kCATransitionFade;
-      
-      [self.view.layer addAnimation:transition forKey:kCATransition];
-      [self popViewControllerAnimated:NO];
-    }
-    else
-    {
-      [self popViewControllerAnimated:animated];
-    }
+    [self performAnimation:@"pop" viewController:nil animated:animated animationType:animationType];
+    
     return;
   }
   
@@ -234,19 +212,8 @@ NSString const *CALLBACK_ASSOCIATED_ID = @"RCCNavigationController.CALLBACK_ASSO
   if ([performAction isEqualToString:@"popToRoot"])
   {
     NSString *animationType = actionParams[@"animationType"];
-    if ([animationType isEqualToString:@"fade"])
-    {
-      CATransition *transition = [CATransition animation];
-      transition.duration = 0.25;
-      transition.type = kCATransitionFade;
-      
-      [self.view.layer addAnimation:transition forKey:kCATransition];
-      [self popToRootViewControllerAnimated:NO];
-    }
-    else
-    {
-      [self popToRootViewControllerAnimated:animated];
-    }
+    [self performAnimation:@"popToRoot" viewController:nil animated:animated animationType:animationType];
+    
     return;
   }
   
@@ -354,6 +321,37 @@ NSString const *CALLBACK_ASSOCIATED_ID = @"RCCNavigationController.CALLBACK_ASSO
       
       [parent setStyleOnInit];
       [parent updateStyle];
+    }
+  }
+}
+
+- (void)performAnimation:(NSString *)performAction viewController:(RCCViewController *)viewController animated:(BOOL)animated animationType:(NSString *)animationType {
+
+  if (animationType && ![animationType isEqualToString:@""])
+  {
+    RCCViewController *topViewController = ((RCCViewController*)self.topViewController);
+    topViewController.animationType = animationType;
+    self.delegate = self.topViewController;
+    
+    if ([performAction isEqualToString:@"push"]) {
+      [self pushViewController:viewController animated:YES];
+    } else if ([performAction isEqualToString:@"pop"]) {
+      [self popViewControllerAnimated:YES];
+    } else if ([performAction isEqualToString:@"popToRoot"]) {
+      [self popToRootViewControllerAnimated:YES];
+    }
+
+    topViewController.animationType = nil;
+    self.delegate = self;
+  }
+  else
+  {
+    if ([performAction isEqualToString:@"push"]) {
+      [self pushViewController:viewController animated:animated];
+    } else if ([performAction isEqualToString:@"pop"]) {
+      [self popViewControllerAnimated:animated];
+    } else if ([performAction isEqualToString:@"popToRoot"]) {
+      [self popToRootViewControllerAnimated:animated];
     }
   }
 }
@@ -509,6 +507,5 @@ NSString const *CALLBACK_ASSOCIATED_ID = @"RCCNavigationController.CALLBACK_ASSO
     }
   });
 }
-
 
 @end

@@ -11,7 +11,7 @@
 
 extern NSString* const RCCViewControllerCancelReactTouchesNotification;
 
-@interface RCCViewController : UIViewController
+@interface RCCViewController : UIViewController <UINavigationControllerDelegate>
 
 @property (nonatomic) NSMutableDictionary *navigatorStyle;
 @property (nonatomic) BOOL navBarHidden;
@@ -22,6 +22,7 @@ extern NSString* const RCCViewControllerCancelReactTouchesNotification;
 @property (nonatomic) UIView *previewView;
 @property (nonatomic) NSArray *previewActions;
 @property (nonatomic) BOOL previewCommit;
+@property (nonatomic) NSString *animationType;
 
 + (UIViewController*)controllerWithLayout:(NSDictionary *)layout globalProps:(NSDictionary *)globalProps bridge:(RCTBridge *)bridge;
 
